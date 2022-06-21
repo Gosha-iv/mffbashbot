@@ -111,15 +111,15 @@ fi
 
 cd
 echo "Updating My Free Farm Bash Bot..."
-rm -f master.zip 2>/dev/null
-rm -rf mffbashbot-master 2>/dev/null
-wget -nv "https://github.com/HackerHarry/mffbashbot/archive/master.zip"
+rm -f russian.zip 2>/dev/null
+rm -rf mffbashbot-russian 2>/dev/null
+wget -nv "https://github.com/Gosha-iv/mffbashbot/archive/russian.zip"
 
 echo "Unpacking the archive..."
 unzip -q master.zip
 
 echo "Updating bot files..."
-cp -f mffbashbot-master/* mffbashbot
+cp -f mffbashbot-russian/* mffbashbot
 # just in case...
 chmod 775 mffbashbot
 if [ -d ~/mffbashbot ]; then
@@ -179,7 +179,7 @@ for FILE in klubauftrag-mengenberechnung.html schmetterlings-rechner.html config
   cp -f "$BOTGUIROOT/$FILE" /tmp
  fi
 done
-cd ~/mffbashbot-master
+cd ~/mffbashbot-russian
 $SUDO rm -rf $BOTGUIROOT
 $SUDO mv mffbashbot-GUI $BOTGUIROOT
 for FILE in klubauftrag-mengenberechnung.html schmetterlings-rechner.html config.php; do
@@ -216,4 +216,4 @@ cd
 # delete updateTrigger in case someone pressed the update button in the meantime
 rm -f mffbashbot/updateTrigger 2>/dev/null
 rm -f mffbashbot/updateInProgress master.zip
-rm -rf mffbashbot-master
+rm -rf mffbashbot-russian

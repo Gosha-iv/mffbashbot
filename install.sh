@@ -49,7 +49,7 @@ echo "Downloading My Free Farm Bash Bot..."
 # just in case...
 rm -f master.zip
 rm -rf mffbashbot-master
-wget -nv "https://github.com/HackerHarry/mffbashbot/archive/master.zip"
+wget -nv "https://github.com/Gosha-iv/mffbashbot/archive/russian.zip"
 
 echo "Unpacking the archive..."
 unzip -q master.zip
@@ -58,7 +58,7 @@ if [ -d "mffbashbot" ]; then
  rm -rf mffbashbot.old
  mv mffbashbot mffbashbot.old
 fi
-mv mffbashbot-master mffbashbot
+mv mffbashbot-russian mffbashbot
 chmod 775 mffbashbot
 cd ~/mffbashbot
 echo "Setting permissions..."
