@@ -47,12 +47,12 @@ sudo apt-get -qq install lighttpd $PHPV screen logrotate cron unzip nano
 cd
 echo "Downloading My Free Farm Bash Bot..."
 # just in case...
-rm -f master.zip
-rm -rf mffbashbot-master
+rm -f russian.zip
+rm -rf mffbashbot-russian
 wget -nv "https://github.com/Gosha-iv/mffbashbot/archive/russian.zip"
 
 echo "Unpacking the archive..."
-unzip -q master.zip
+unzip -q russian.zip
 # make sure to preserve an existing directory at least once
 if [ -d "mffbashbot" ]; then
  rm -rf mffbashbot.old
