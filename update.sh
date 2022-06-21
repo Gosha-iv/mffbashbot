@@ -116,7 +116,7 @@ rm -rf mffbashbot-russian 2>/dev/null
 wget -nv "https://github.com/Gosha-iv/mffbashbot/archive/russian.zip"
 
 echo "Unpacking the archive..."
-unzip -q master.zip
+unzip -q russian.zip
 
 echo "Updating bot files..."
 cp -f mffbashbot-russian/* mffbashbot
@@ -215,5 +215,5 @@ echo "Done!"
 cd
 # delete updateTrigger in case someone pressed the update button in the meantime
 rm -f mffbashbot/updateTrigger 2>/dev/null
-rm -f mffbashbot/updateInProgress master.zip
+rm -f mffbashbot/updateInProgress russian.zip
 rm -rf mffbashbot-russian
