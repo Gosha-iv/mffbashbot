@@ -55,6 +55,8 @@ case "$MFFLANG" in
          ;;
  pl) DOMAIN=wolnifarmerzy.pl
          ;;
+ ru) DOMAIN=mojaderewnja.ru
+         ;;
   *) DOMAIN=myfreefarm.de
          ;;
 esac
