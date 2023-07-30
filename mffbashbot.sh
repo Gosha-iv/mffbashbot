@@ -2,7 +2,7 @@
 # shellcheck disable=SC2086,SC2155
 #
 # My Free Farm Bash Bot
-# Copyright 2016-22 Harun "Harry" Basalamah
+# Copyright 2016-23 Harun "Harry" Basalamah
 #
 # For license see LICENSE file
 
@@ -166,7 +166,7 @@ while (true); do
  NANOVALUE=$(($(date +%s%N) / 1000000))
  LOGOFFURL="https://s${MFFSERVER}.${DOMAIN}/main.php?page=logout&logoutbutton=1"
  POSTURL="https://www.${DOMAIN}/ajax/createtoken2.php?n=${NANOVALUE}"
- AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0"
+ AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0"
  # There's another AGENT string in logonandgetfarmdata.sh (!)
  POSTDATA="server=${MFFSERVER}&username=${MFFUSER}&password=${MFFPASS}&ref=&retid="
 
@@ -524,6 +524,14 @@ while (true); do
    echo "Checking for waiting flower farmies..."
    checkFarmies flowerfarmie
    # checkFlowerFarmies
+  fi
+
+  if grep -q "doeventgarden = 1" $CFGFILE; then
+   echo "Checking for pending tasks in event garden..."
+   if ! checkEventGarden; then
+    # turn off event garden feature
+    sed -i 's/doeventgarden = 1/doeventgarden = 0/' $CFGFILE
+   fi
   fi
 
   # daily actions
