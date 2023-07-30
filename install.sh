@@ -34,7 +34,7 @@ case $DVER in
  8.*|*essie*)
   PHPV=php5-cgi
   ;;
- 9.*|10.*|*tretch*|*uster*|*sid*)
+ 9.*|10.*|11.*|*tretch*|*uster*|*sid*)
   PHPV=php-cgi
   ;;
 esac
